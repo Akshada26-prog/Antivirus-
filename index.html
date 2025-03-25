@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Scanner</title>
+</head>
+<body>
+    <h1>Welcome to the File Scanner</h1>
+    <p>Upload a file to scan for viruses:</p>
+    
+    <form action="/scan_file/" method="post" enctype="multipart/form-data">
+        <label for="file">Select file:</label>
+        <input type="file" name="file" id="file" required>
+        <button type="submit">Scan</button>
+    </form>
+
+    <h2>Or Upload a Directory (Zip format)</h2>
+    <form action="/scan_directory/" method="post" enctype="multipart/form-data">
+        <label for="directory">Select directory (Zip):</label>
+        <input type="file" name="directory" id="directory" required>
+        <button type="submit">Scan Directory</button>
+    </form>
+</body>
+</html>
